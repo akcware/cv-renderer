@@ -19,11 +19,9 @@ StandardError=journal
 SyslogIdentifier=cv-renderer
 
 # Security hardening
+# Note: ProtectSystem, ProtectHome, and PrivateTmp are disabled
+# because they require namespace support not available on all VPS types
 NoNewPrivileges=true
-PrivateTmp=true
-ProtectSystem=strict
-ProtectHome=true
-ReadWritePaths=/var/www/resume/output
 
 [Install]
 WantedBy=multi-user.target
