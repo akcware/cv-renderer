@@ -12,6 +12,12 @@ A modern CV rendering system built with Bun that generates professional HTML and
 - 📦 **CLI Tools**: Command-line interface for batch operations
 - 🔍 **Git History**: Track changes with version control
 
+## Live Example
+
+See this system in action: **[resume.cekim.eu](https://resume.cekim.eu)**
+
+![Resume Screenshot](assets/resume-screenshot.png)
+
 ## Folder Structure
 
 ```
