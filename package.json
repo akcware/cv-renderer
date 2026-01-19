@@ -5,15 +5,24 @@
   "private": true,
   "scripts": {
     "dev": "bun --hot src/index.ts",
+    "start": "NODE_ENV=production bun src/index.ts",
     "build": "bun src/cli.ts build",
     "build:all": "bun src/cli.ts build:all",
     "list": "bun src/cli.ts list",
-    "new": "bun src/cli.ts new"
+    "new": "bun src/cli.ts new",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "deploy": "bash scripts/deploy.sh",
+    "setup:server": "bash scripts/setup-server.sh"
   },
   "devDependencies": {
+    "@eslint/js": "^9.39.2",
     "@types/bun": "latest",
+    "@types/eslint": "^9.6.1",
     "@types/react": "^18.2.0",
-    "@types/react-dom": "^18.2.0"
+    "@types/react-dom": "^18.2.0",
+    "eslint": "^9.39.2",
+    "typescript-eslint": "^8.53.0"
   },
   "peerDependencies": {
     "typescript": "^5"
