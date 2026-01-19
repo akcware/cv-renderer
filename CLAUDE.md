@@ -1,8 +1,124 @@
----
-description: Use Bun instead of Node.js, npm, pnpm, or vite.
-globs: "*.ts, *.tsx, *.html, *.css, *.js, *.jsx, package.json"
-alwaysApply: false
----
+# CLAUDE.md
+
+This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+
+## Project Overview
+
+This is a CV rendering system that generates professional HTML and PDF resumes from JSON Resume format. It includes:
+- CLI tools for batch CV generation
+- Web viewer with React frontend
+- Multi-format export (HTML/PDF)
+- Support for CV variants
+- Git-based version history
+
+## Common Commands
+
+### Development
+```bash
+bun run dev              # Start web server with HMR on port 3000
+```
+
+### Building CVs
+```bash
+bun run build current                    # Build current.json
+bun run build variants/tech-focused      # Build a variant
+bun run build current --format html      # Build HTML only
+bun run build current --format pdf       # Build PDF only
+bun run build:all                        # Build all CVs
+```
+
+### CV Management
+```bash
+bun run list                    # List all available CVs
+bun run new variants/name       # Create new CV from current.json template
+```
+
+### Direct CLI Access
+```bash
+bun src/cli.ts <command> [options]
+```
+
+## Architecture
+
+### Core Components
+
+**Renderer (`src/renderer.ts`)**
+- Core engine for CV operations
+- `loadCV()` - Loads JSON data from `data/` directory
+- `listCVs()` - Scans `data/` for all `.json` files
+- `renderToHTML()` - Uses Professional theme to render HTML
+- `renderToPDF()` - Uses Puppeteer to generate PDFs from HTML
+- `buildCV()` - Main build function (HTML + PDF)
+- `buildAllCVs()` - Batch processing all CVs
+
+**Web Server (`src/index.ts`)**
+- Bun.serve() with simple routing
+- Routes:
+  - `/` - Current CV as HTML
+  - `/pdf` - Current CV as PDF (generates on-demand if missing)
+  - `/json` - Current CV as JSON
+  - `/:variant` - Variant CV as HTML (e.g., `/variants/tech-focused`)
+  - `/:variant/pdf` - Variant CV as PDF (e.g., `/variants/tech-focused/pdf`)
+  - `/:variant/json` - Variant CV as JSON (e.g., `/variants/tech-focused/json`)
+
+**CLI (`src/cli.ts`)**
+- Commands: `build`, `build:all`, `list`, `new`
+- Uses `mri` for argument parsing
+- Handles format flags (`--format html|pdf|both`)
+
+**Web Output**
+- Clean, direct rendering of CVs
+- No UI chrome or navigation elements
+- Just the CV content itself
+
+### Data Flow
+
+**Build Process:**
+1. Load JSON from `data/*.json`
+2. Render using Professional theme
+3. Save HTML to `output/html/`
+4. Generate PDF via Puppeteer → `output/pdf/`
+
+**Web Server:**
+1. Route request based on URL pattern
+2. Load CV data from `data/` directory
+3. Render HTML using Professional theme or serve PDF
+4. Generate PDF on-demand if doesn't exist
+
+### Directory Structure
+
+```
+data/           # CV source files (git tracked)
+  current.json  # Primary CV
+  variants/     # CV variations
+output/         # Generated files (git ignored)
+  html/
+  pdf/
+src/
+  renderer.ts   # Core engine
+  index.ts      # Web server
+  cli.ts        # CLI commands
+  types.ts      # TypeScript types
+```
+
+### Key Patterns
+
+**CV Naming:**
+- CV files: `data/*.json` or `data/variants/*.json`
+- Reference by name without extension: `current` or `variants/tech-focused`
+- Output mirrors structure: `output/html/variants/tech-focused.html`
+
+**On-Demand Generation:**
+- Web routes check if output exists
+- If missing, calls `buildCV()` automatically
+- CLI always regenerates (no caching)
+
+**JSON Resume Schema:**
+- Standard format with `basics`, `work`, `education`, `skills`, `projects`
+- See `src/types.ts` for TypeScript definitions
+- Theme: Professional (`@jsonresume/jsonresume-theme-professional`)
+
+## Bun-Specific Instructions
 
 Default to using Bun instead of Node.js.
 
@@ -14,7 +130,7 @@ Default to using Bun instead of Node.js.
 - Use `bunx <package> <command>` instead of `npx <package> <command>`
 - Bun automatically loads .env, so don't use dotenv.
 
-## APIs
+### Bun APIs
 
 - `Bun.serve()` supports WebSockets, HTTPS, and routes. Don't use `express`.
 - `bun:sqlite` for SQLite. Don't use `better-sqlite3`.
@@ -24,11 +140,11 @@ Default to using Bun instead of Node.js.
 - Prefer `Bun.file` over `node:fs`'s readFile/writeFile
 - Bun.$`ls` instead of execa.
 
-## Testing
+### Testing
 
 Use `bun test` to run tests.
 
-```ts#index.test.ts
+```ts
 import { test, expect } from "bun:test";
 
 test("hello world", () => {
@@ -36,13 +152,13 @@ test("hello world", () => {
 });
 ```
 
-## Frontend
+### Frontend with Bun
 
 Use HTML imports with `Bun.serve()`. Don't use `vite`. HTML imports fully support React, CSS, Tailwind.
 
 Server:
 
-```ts#index.ts
+```ts
 import index from "./index.html"
 
 Bun.serve({
@@ -54,18 +170,6 @@ Bun.serve({
       },
     },
   },
-  // optional websocket support
-  websocket: {
-    open: (ws) => {
-      ws.send("Hello, world!");
-    },
-    message: (ws, message) => {
-      ws.send(message);
-    },
-    close: (ws) => {
-      // handle close
-    }
-  },
   development: {
     hmr: true,
     console: true,
@@ -73,39 +177,18 @@ Bun.serve({
 })
 ```
 
-HTML files can import .tsx, .jsx or .js files directly and Bun's bundler will transpile & bundle automatically. `<link>` tags can point to stylesheets and Bun's CSS bundler will bundle.
+HTML files can import .tsx, .jsx or .js files directly and Bun's bundler will transpile & bundle automatically.
 
-```html#index.html
+```html
 <html>
   <body>
-    <h1>Hello, world!</h1>
     <script type="module" src="./frontend.tsx"></script>
   </body>
 </html>
 ```
 
-With the following `frontend.tsx`:
-
-```tsx#frontend.tsx
-import React from "react";
-import { createRoot } from "react-dom/client";
-
-// import .css files directly and it works
-import './index.css';
-
-const root = createRoot(document.body);
-
-export default function Frontend() {
-  return <h1>Hello, world!</h1>;
-}
-
-root.render(<Frontend />);
-```
-
-Then, run index.ts
+Then run with:
 
 ```sh
 bun --hot ./index.ts
 ```
-
-For more information, read the Bun API docs in `node_modules/bun-types/docs/**.mdx`.

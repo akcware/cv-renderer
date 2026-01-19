@@ -5,7 +5,7 @@ A modern CV rendering system built with Bun that generates professional HTML and
 ## Features
 
 - 📝 **JSON Resume Format**: Standard schema for resume data
-- 🎨 **Professional Theming**: Uses jsonresume-theme-even
+- 🎨 **Professional Theming**: Uses Professional theme
 - 📄 **Multi-Format Export**: Generate HTML and PDF outputs
 - 🖥️ **Web Viewer**: Interactive browser-based CV viewer
 - 🔄 **CV Variants**: Support for multiple resume variations
@@ -53,19 +53,21 @@ bun install
 
 ## Quick Start
 
-### 1. Start the Web Viewer
+### 1. Start the Web Server
 
 ```bash
 bun run dev
 ```
 
-Then open http://localhost:3000 in your browser.
+Then open http://localhost:3000 in your browser to view your current CV.
 
-The web viewer provides:
-- CV list sidebar
-- Live HTML preview
-- PDF viewing (opens in new tab)
-- Download buttons for HTML and PDF
+The web server provides clean, direct rendering:
+- `http://localhost:3000/` - Current CV (HTML)
+- `http://localhost:3000/pdf` - Current CV (PDF)
+- `http://localhost:3000/json` - Current CV (JSON)
+- `http://localhost:3000/variants/tech-focused` - Variant CV (HTML)
+- `http://localhost:3000/variants/tech-focused/pdf` - Variant CV (PDF)
+- `http://localhost:3000/variants/tech-focused/json` - Variant CV (JSON)
 
 ### 2. Build CVs with CLI
 
@@ -165,30 +167,27 @@ This will:
 2. Update the meta.lastModified timestamp
 3. Provide instructions for editing and building
 
-## Web Server API
+## Web Server Routes
 
 The web server (`src/index.ts`) exposes the following routes:
 
 ### GET `/`
-Main web viewer interface
+Current CV rendered as HTML
 
-### GET `/api/cvs`
-List all available CVs (JSON)
+### GET `/pdf`
+Current CV as PDF (generates on-demand if not exists)
 
-### GET `/api/cv/:name`
-Get CV data (JSON)
+### GET `/json`
+Current CV as JSON
 
-### GET `/render/:name`
-Render CV as HTML (live preview)
+### GET `/:variant`
+Variant CV rendered as HTML (e.g., `/variants/tech-focused`)
 
-### GET `/pdf/:name`
-View PDF in browser (generates on-demand if not exists)
+### GET `/:variant/pdf`
+Variant CV as PDF (e.g., `/variants/tech-focused/pdf`)
 
-### GET `/download/html/:name`
-Download HTML file
-
-### GET `/download/pdf/:name`
-Download PDF file
+### GET `/:variant/json`
+Variant CV as JSON (e.g., `/variants/tech-focused/json`)
 
 ## CV Data Format
 
@@ -261,7 +260,7 @@ git diff HEAD~1 HEAD -- data/current.json
 ## Development Workflow
 
 1. **Edit CV**: Modify JSON files in `data/`
-2. **Preview Changes**: Use web viewer (`bun run dev`)
+2. **Preview Changes**: Start server (`bun run dev`) and open browser
 3. **Build Outputs**: Generate HTML/PDF (`bun run build current`)
 4. **Commit Changes**: Track with git (`git add data/ && git commit`)
 
@@ -321,9 +320,8 @@ bun src/cli.ts <command> [options]
 ## Tech Stack
 
 - **Runtime**: [Bun](https://bun.sh) - Fast all-in-one JavaScript runtime
-- **Server**: Bun.serve() with HTML imports
-- **Frontend**: React 18 with TypeScript
-- **Theme**: jsonresume-theme-even
+- **Server**: Bun.serve() with clean routing
+- **Theme**: Professional (@jsonresume/jsonresume-theme-professional)
 - **PDF**: Puppeteer
 - **CLI**: mri (argument parsing)
 

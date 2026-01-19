@@ -1,0 +1,250 @@
+{
+  "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
+  "basics": {
+    "name": "Aşkın Kadir Çekim",
+    "label": "Informatikstudent",
+    "email": "kadircekim.07@gmail.com",
+    "phone": "+49 162 760 9755",
+    "summary": "Informatikstudent am KIT mit praktischer Erfahrung im Aufbau von KI-gestützten Produkten und Hackathon-preisgekrönten Prototypen. Fokus auf angewandte LLM-Systeme, Workflow-Automatisierung und Entwicklerwerkzeuge. Erfahren mit LangChain, OpenRouter, Flutter, FastAPI und datengesteuerten Backends. Aktiv in der Entwicklung realer Produkte, die KI in Produktionsworkflows integrieren.",
+    "location": {
+      "city": "Karlsruhe",
+      "countryCode": "DE",
+      "region": "Deutschland"
+    },
+    "profiles": [
+      {
+        "network": "LinkedIn",
+        "username": "askinkadir",
+        "url": "https://linkedin.com/in/askinkadir/"
+      },
+      {
+        "network": "GitHub",
+        "username": "akcware",
+        "url": "https://github.com/akcware"
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "OmmaWorks",
+      "position": "Spezialist für Geschäftsabläufe",
+      "location": "Remote",
+      "startDate": "2024-03",
+      "summary": "Spezialist für Geschäftsabläufe mit Fokus auf KI-Integration und Workflow-Automatisierung",
+      "highlights": [
+        "Recherchiert, evaluiert und integriert KI-Tools (ChatGPT, Gemini und andere LLM-basierte Lösungen) zur Effizienzsteigerung in verschiedenen Abteilungen",
+        "Automatisiert interne Workflows durch Integration KI-gestützter Lösungen in den täglichen Betrieb, was die Teamproduktivität erhöht hat",
+        "Strukturiert und optimiert die Unternehmenswissensdatenbank mithilfe von KI-gestützter Dokumentation und Suchfunktionen",
+        "Entwickelt und pflegt BI-Dashboards (zunächst mit Retool, später mit Metabase) mit KI-erweiterter Analytik für datengestützte Entscheidungsfindung"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "Karlsruher Institut für Technologie (KIT)",
+      "area": "Informatik",
+      "studyType": "Bachelor of Science",
+      "startDate": "2025",
+      "location": "Karlsruhe, Deutschland"
+    },
+    {
+      "institution": "Marmara Universität",
+      "area": "Informatik (Transferiert)",
+      "studyType": "Bachelor of Science",
+      "startDate": "2023",
+      "endDate": "2024",
+      "location": "Istanbul, Türkei"
+    },
+    {
+      "institution": "Privates Antalya Final Wissenschaftsgymnasium",
+      "studyType": "Gymnasium",
+      "startDate": "2022",
+      "endDate": "2023",
+      "location": "Antalya, Türkei"
+    },
+    {
+      "institution": "Dr. İlhami Tankut Anadolu-Gymnasium",
+      "studyType": "Gymnasium",
+      "startDate": "2019",
+      "endDate": "2022",
+      "location": "Antalya, Türkei"
+    }
+  ],
+  "skills": [
+    {
+      "name": "Angewandte KI & LLM-Systeme",
+      "keywords": [
+        "LangChain",
+        "OpenRouter",
+        "OpenAI API",
+        "Gemini API",
+        "Prompt-Engineering und Evaluierung",
+        "Langzeit-Speichersysteme (SQLite-basiert)"
+      ]
+    },
+    {
+      "name": "Softwareentwicklung",
+      "keywords": [
+        "Backend: FastAPI, Node.js",
+        "Frontend: Flutter, Next.js",
+        "Runtime & Tooling: Bun",
+        "REST APIs, asynchrone Workflows"
+      ]
+    },
+    {
+      "name": "Datenbanken",
+      "keywords": [
+        "PostgreSQL",
+        "SQLite",
+        "MongoDB"
+      ]
+    },
+    {
+      "name": "Entwicklertools & Analytik",
+      "keywords": [
+        "Git & GitHub",
+        "Metabase",
+        "Notion (Wissenssysteme & Dokumentation)"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "Proaktiver EV Co-Pilot",
+      "description": "KI-gestützter Assistent für EV-Reiseplanung mit Mehrfachstopp-Routing",
+      "highlights": [
+        "Implementiert Benutzerpräferenz-Lernen, einschränkungsbewusste Bewertung und Echtzeit-Ladeeinblicke",
+        "Gebaut einen vollständigen architektonischen Prototyp mit Flutter-Frontend, HERE APIs, präferenzbasiertem Ranking-System und LLM-gesteuertem Intent-Parser",
+        "Ausgezeichnet als Gewinner für Innovation in intelligenter EV-Navigation"
+      ],
+      "keywords": [
+        "KI",
+        "Elektrofahrzeug",
+        "Flutter",
+        "LLM",
+        "HERE APIs"
+      ],
+      "startDate": "2025",
+      "endDate": "2025",
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7400505797337747456/",
+      "roles": [
+        "Entwickler"
+      ],
+      "entity": "Mercedes-Benz Tech Innovation Hackathon",
+      "type": "application"
+    },
+    {
+      "name": "Twinify -- Ihr KI-gesteuerter digitaler Zwilling für WhatsApp",
+      "description": "KI-gesteuerter digitaler Zwilling, der Persönlichkeit, Stimme und Kommunikationsstil auf WhatsApp widerspiegelt",
+      "highlights": [
+        "Integriert OpenAI GPT für konversationelle Intelligenz, ElevenLabs für realistische Stimmklonierung und WhatsApp Web.js für Messaging",
+        "Implementiert eine SQLite-gestützte Speicherebene zur Bewahrung von Langzeitkontext und zur Ermöglichung reichhaltiger, fortlaufender Gespräche",
+        "Anerkannt als Gewinner in der Kategorie 'Explorative Nutzung von LLMs und Vision-Modellen' beim Nosu AI Hackathon"
+      ],
+      "keywords": [
+        "KI",
+        "LLM",
+        "Stimmklonierung",
+        "WhatsApp",
+        "SQLite"
+      ],
+      "startDate": "2025",
+      "endDate": "2025",
+      "url": "https://devpost.com/software/twinify-your-ai-powered-digital-twin-for-whatsapp",
+      "roles": [
+        "Entwickler"
+      ],
+      "entity": "Nosu AI Hackathon",
+      "type": "application"
+    },
+    {
+      "name": "UNITE -- Öffentliche Beschaffungsplattform",
+      "description": "Krisenzeit-Plattform zur Optimierung der öffentlichen Beschaffung, fungiert als 'Alibaba für Regierungsausschreibungen'",
+      "highlights": [
+        "Entwickelt mit Node.js zur effizienten Ausschreibungsfindung und -zuordnung zwischen Regierungen und Lieferanten",
+        "4. Platz beim #EuVsVirus Hackathon im Alter von 14 Jahren erreicht"
+      ],
+      "keywords": [
+        "Node.js",
+        "Regierung",
+        "Beschaffung"
+      ],
+      "startDate": "2020",
+      "endDate": "2020",
+      "url": "https://devpost.com/software/unite-government-procurement-platform",
+      "roles": [
+        "Entwickler"
+      ],
+      "entity": "#EuVsVirus Hackathon",
+      "type": "application"
+    },
+    {
+      "name": "Liberta -- Dezentrales soziales Medium",
+      "description": "Blockchain-basierte Social-Media-Plattform mit Fokus auf Privatsphäre, Datenbesitz und Zensurresistenz",
+      "highlights": [
+        "Implementiert das Frontend mit Vue.js und nutzt die NEO N3 Blockchain mit dem NEO•ONE Entwickler-Framework für Backend-Operationen",
+        "Entwickelt und getestet Smart Contracts lokal mit den lokalen Blockchain-Testfähigkeiten von NEO•ONE vor der Bereitstellung",
+        "Bereitgestellt eine dezentrale Alternative zu traditionellen Social-Media-Plattformen"
+      ],
+      "keywords": [
+        "Vue.js",
+        "Blockchain",
+        "NEO N3",
+        "Privatsphäre"
+      ],
+      "url": "https://devpost.com/software/liberta-the-social-media-that-managed-by-users",
+      "roles": [
+        "Entwickler"
+      ],
+      "type": "application"
+    },
+    {
+      "name": "DON8 -- Spenden leicht gemacht",
+      "description": "Plattformübergreifende mobile App zur Förderung wohltätiger Spenden durch alltägliche Einkäufe",
+      "highlights": [
+        "Gebaut mit Flutter zur nahtlosen Integration von Spenden in den Alltag",
+        "Fokussiert auf Anwendungsfälle im Lebensmittel- und Getränkesektor"
+      ],
+      "keywords": [
+        "Flutter",
+        "Mobil",
+        "Wohltätigkeit"
+      ],
+      "url": "https://devpost.com/software/don8-donation-made-great",
+      "roles": [
+        "Entwickler"
+      ],
+      "type": "application"
+    }
+  ],
+  "languages": [
+    {
+      "language": "Türkisch",
+      "fluency": "Muttersprache"
+    },
+    {
+      "language": "Englisch",
+      "fluency": "Fortgeschritten"
+    },
+    {
+      "language": "Deutsch",
+      "fluency": "Fortgeschritten"
+    }
+  ],
+  "interests": [
+    {
+      "name": "Technologie",
+      "keywords": [
+        "KI",
+        "Elektromobilität",
+        "Entwicklerwerkzeuge",
+        "Large Language Model Anwendungen"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "jsonresume-theme-even",
+    "version": "v1.0.0",
+    "lastModified": "2026-01-19"
+  }
+}

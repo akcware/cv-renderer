@@ -47,13 +47,13 @@ export async function listCVs(): Promise<CVMetadata[]> {
 }
 
 /**
- * Render CV to HTML using jsonresume-theme-even
+ * Render CV to HTML using Professional theme
  * @param cv - CV data
  * @returns HTML string
  */
 export async function renderToHTML(cv: CVData): Promise<string> {
   // Dynamic import to avoid loading theme until needed
-  const { render } = await import("jsonresume-theme-even");
+  const { render } = await import("@jsonresume/jsonresume-theme-professional");
 
   const html = await render(cv);
   return html;

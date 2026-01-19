@@ -19,7 +19,7 @@
     "typescript": "^5"
   },
   "dependencies": {
-    "jsonresume-theme-even": "^0.26.1",
+    "@jsonresume/jsonresume-theme-professional": "^1.0.18",
     "mri": "^1.2.0",
     "puppeteer": "^22.0.0",
     "react": "^18.2.0",

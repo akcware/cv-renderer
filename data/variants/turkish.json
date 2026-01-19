@@ -1,0 +1,250 @@
+{
+  "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
+  "basics": {
+    "name": "Aşkın Kadir Çekim",
+    "label": "Bilgisayar Bilimleri Öğrencisi",
+    "email": "kadircekim.07@gmail.com",
+    "phone": "+49 162 760 9755",
+    "summary": "KIT'te Bilgisayar Bilimleri öğrencisi, yapay zeka destekli ürünler ve hackathon kazanan prototipler geliştirme deneyimine sahip. Uygulamalı LLM sistemleri, iş akışı otomasyonu ve geliştirici araçlarına odaklanıyorum. LangChain, OpenRouter, Flutter, FastAPI ve veri odaklı backend sistemleri konusunda deneyimliyim. Yapay zekayı üretim iş akışlarına entegre eden gerçek dünya ürünleri geliştiriyorum.",
+    "location": {
+      "city": "Karlsruhe",
+      "countryCode": "DE",
+      "region": "Almanya"
+    },
+    "profiles": [
+      {
+        "network": "LinkedIn",
+        "username": "askinkadir",
+        "url": "https://linkedin.com/in/askinkadir/"
+      },
+      {
+        "network": "GitHub",
+        "username": "akcware",
+        "url": "https://github.com/akcware"
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "OmmaWorks",
+      "position": "İş Operasyonları Uzmanı",
+      "location": "Uzaktan",
+      "startDate": "2024-03",
+      "summary": "Yapay zeka entegrasyonu ve iş akışı otomasyonuna odaklanan İş Operasyonları Uzmanı",
+      "highlights": [
+        "Departmanlar arası verimliliği artırmak için yapay zeka araçlarını (ChatGPT, Gemini ve diğer LLM tabanlı çözümler) araştırdım, değerlendirdim ve entegre ettim",
+        "Yapay zeka destekli çözümleri günlük operasyonlara entegre ederek iç iş akışlarını otomatikleştirdim ve ekip verimliliğini artırdım",
+        "Yapay zeka destekli dokümantasyon ve arama yetenekleri kullanarak şirket Bilgi Bankası'nı yapılandırdım ve optimize ettim",
+        "Veri odaklı karar verme için yapay zeka ile güçlendirilmiş analitiği içeren BI panolarını (başlangıçta Retool ile, sonrasında Metabase ile) geliştirdim ve sürdürdüm"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "Karlsruhe Teknoloji Enstitüsü (KIT)",
+      "area": "Bilgisayar Bilimleri",
+      "studyType": "Lisans",
+      "startDate": "2025",
+      "location": "Karlsruhe, Almanya"
+    },
+    {
+      "institution": "Marmara Üniversitesi",
+      "area": "Bilgisayar Mühendisliği (Transfer)",
+      "studyType": "Lisans",
+      "startDate": "2023",
+      "endDate": "2024",
+      "location": "İstanbul, Türkiye"
+    },
+    {
+      "institution": "Özel Antalya Final Fen Lisesi",
+      "studyType": "Lise",
+      "startDate": "2022",
+      "endDate": "2023",
+      "location": "Antalya, Türkiye"
+    },
+    {
+      "institution": "Dr. İlhami Tankut Anadolu Lisesi",
+      "studyType": "Lise",
+      "startDate": "2019",
+      "endDate": "2022",
+      "location": "Antalya, Türkiye"
+    }
+  ],
+  "skills": [
+    {
+      "name": "Uygulamalı Yapay Zeka & LLM Sistemleri",
+      "keywords": [
+        "LangChain",
+        "OpenRouter",
+        "OpenAI API",
+        "Gemini API",
+        "İstem mühendisliği ve değerlendirme",
+        "Uzun vadeli hafıza sistemleri (SQLite tabanlı)"
+      ]
+    },
+    {
+      "name": "Yazılım Mühendisliği",
+      "keywords": [
+        "Backend: FastAPI, Node.js",
+        "Frontend: Flutter, Next.js",
+        "Çalışma zamanı ve araçlar: Bun",
+        "REST API'ler, asenkron iş akışları"
+      ]
+    },
+    {
+      "name": "Veritabanları",
+      "keywords": [
+        "PostgreSQL",
+        "SQLite",
+        "MongoDB"
+      ]
+    },
+    {
+      "name": "Geliştirici Araçları & Analitik",
+      "keywords": [
+        "Git & GitHub",
+        "Metabase",
+        "Notion (bilgi sistemleri ve dokümantasyon)"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "Proaktif EV Yardımcısı",
+      "description": "Çok duraklı rota planlaması için yapay zeka destekli elektrikli araç seyahat planlama asistanı",
+      "highlights": [
+        "Kullanıcı tercihi öğrenme, kısıt farkındalıklı puanlama ve gerçek zamanlı şarj öngörüleri uyguladım",
+        "Flutter ön yüzü, HERE API'leri, tercih tabanlı sıralama motoru ve LLM güdümlü niyet ayrıştırıcısı ile tam bir mimari prototip geliştirdim",
+        "Akıllı elektrikli araç navigasyonundaki inovasyon ile ödül kazandım"
+      ],
+      "keywords": [
+        "Yapay Zeka",
+        "Elektrikli Araç",
+        "Flutter",
+        "LLM",
+        "HERE API'leri"
+      ],
+      "startDate": "2025",
+      "endDate": "2025",
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7400505797337747456/",
+      "roles": [
+        "Geliştirici"
+      ],
+      "entity": "Mercedes-Benz Tech Innovation Hackathon",
+      "type": "application"
+    },
+    {
+      "name": "Twinify -- WhatsApp için Yapay Zeka Destekli Dijital İkiziniz",
+      "description": "WhatsApp'ta kişiliği, sesi ve iletişim tarzını yansıtan yapay zeka destekli dijital ikiz",
+      "highlights": [
+        "Konuşma zekası için OpenAI GPT'yi, gerçekçi ses klonlama için ElevenLabs'ı ve mesajlaşma için WhatsApp Web.js'yi entegre ettim",
+        "Uzun vadeli bağlamı korumak ve zengin, devam eden konuşmaları mümkün kılmak için SQLite tabanlı bir hafıza katmanı uyguladım",
+        "Nosu AI Hackathon'da 'LLM ve Görme modellerinin keşifsel kullanımı' kategorisinde ödül kazandım"
+      ],
+      "keywords": [
+        "Yapay Zeka",
+        "LLM",
+        "Ses Klonlama",
+        "WhatsApp",
+        "SQLite"
+      ],
+      "startDate": "2025",
+      "endDate": "2025",
+      "url": "https://devpost.com/software/twinify-your-ai-powered-digital-twin-for-whatsapp",
+      "roles": [
+        "Geliştirici"
+      ],
+      "entity": "Nosu AI Hackathon",
+      "type": "application"
+    },
+    {
+      "name": "UNITE -- Devlet Tedarik Platformu",
+      "description": "Kamu alımlarını kolaylaştırmak için kriz zamanı platformu, 'devlet ihaleleri için Alibaba' görevi görür",
+      "highlights": [
+        "Hükümetler ve tedarikçiler arasında verimli ihale keşfi ve eşleştirmeyi sağlamak için Node.js kullanarak geliştirdim",
+        "14 yaşındayken #EuVsVirus Hackathon'da 4. oldum"
+      ],
+      "keywords": [
+        "Node.js",
+        "Devlet",
+        "Tedarik"
+      ],
+      "startDate": "2020",
+      "endDate": "2020",
+      "url": "https://devpost.com/software/unite-government-procurement-platform",
+      "roles": [
+        "Geliştirici"
+      ],
+      "entity": "#EuVsVirus Hackathon",
+      "type": "application"
+    },
+    {
+      "name": "Liberta -- Merkeziyetsiz Sosyal Medya",
+      "description": "Gizlilik, veri sahipliği ve sansür direncine odaklanan blockchain tabanlı sosyal medya platformu",
+      "highlights": [
+        "Ön yüzü Vue.js kullanarak uyguladım ve arka uç işlemleri için NEO•ONE geliştirici çerçevesi ile NEO N3 blockchain'ini kullandım",
+        "Dağıtımdan önce NEO•ONE'ın yerel blockchain test yeteneklerini kullanarak akıllı sözleşmeleri yerel olarak geliştirdim ve test ettim",
+        "Geleneksel sosyal medya platformlarına merkeziyetsiz bir alternatif sundum"
+      ],
+      "keywords": [
+        "Vue.js",
+        "Blockchain",
+        "NEO N3",
+        "Gizlilik"
+      ],
+      "url": "https://devpost.com/software/liberta-the-social-media-that-managed-by-users",
+      "roles": [
+        "Geliştirici"
+      ],
+      "type": "application"
+    },
+    {
+      "name": "DON8 -- Bağış Kolaylaştı",
+      "description": "Günlük alışverişler aracılığıyla hayırsever bağışları teşvik eden çapraz platform mobil uygulama",
+      "highlights": [
+        "Bağışları günlük yaşama sorunsuz bir şekilde entegre etmek için Flutter kullanarak geliştirdim",
+        "Yiyecek ve içecek sektöründeki kullanım durumlarına odaklandım"
+      ],
+      "keywords": [
+        "Flutter",
+        "Mobil",
+        "Hayır"
+      ],
+      "url": "https://devpost.com/software/don8-donation-made-great",
+      "roles": [
+        "Geliştirici"
+      ],
+      "type": "application"
+    }
+  ],
+  "languages": [
+    {
+      "language": "Türkçe",
+      "fluency": "Ana dil"
+    },
+    {
+      "language": "İngilizce",
+      "fluency": "İleri seviye"
+    },
+    {
+      "language": "Almanca",
+      "fluency": "İleri seviye"
+    }
+  ],
+  "interests": [
+    {
+      "name": "Teknoloji",
+      "keywords": [
+        "Yapay zeka",
+        "Elektrikli araç mobilite",
+        "Geliştirici araçları",
+        "Büyük dil modeli uygulamaları"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "jsonresume-theme-even",
+    "version": "v1.0.0",
+    "lastModified": "2026-01-19"
+  }
+}
