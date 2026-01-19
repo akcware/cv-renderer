@@ -76,9 +76,9 @@ export async function renderToPDF(html: string, outputPath: string): Promise<voi
     const page = await browser.newPage();
     await page.setContent(html, { waitUntil: 'networkidle0' });
 
-    // Ensure output directory exists
+    // Ensure output directory exists using Bun's shell
     const dir = dirname(outputPath);
-    await Bun.write(join(dir, '.keep'), '');
+    await Bun.$`mkdir -p ${dir}`;
 
     await page.pdf({
       path: outputPath,
@@ -117,6 +117,9 @@ export async function buildCV(
     let htmlPath: string | undefined;
     if (format === 'html' || format === 'both') {
       htmlPath = join(OUTPUT_DIR, 'html', `${name}.html`);
+      // Ensure output directory exists using Bun's shell
+      const dir = dirname(htmlPath);
+      await Bun.$`mkdir -p ${dir}`;
       await Bun.write(htmlPath, html);
     }
 
