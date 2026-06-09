@@ -1,0 +1,158 @@
+{
+    "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
+    "basics": {
+        "name": "Aşkın Kadir Çekim",
+        "label": "Computer Science Student & Founder",
+        "email": "kadircekim.07@gmail.com",
+        "phone": "+49 162 760 9755",
+        "summary": "CS student at KIT and founder of Tesseract, a paid AI education product I built and shipped end-to-end (iOS app, backend, and a media-generation pipeline). Focused on applied LLM systems and full-stack product engineering.",
+        "location": {
+            "city": "Karlsruhe",
+            "countryCode": "DE",
+            "region": "Germany"
+        },
+        "profiles": [
+            {
+                "network": "LinkedIn",
+                "username": "askinkadir",
+                "url": "https://linkedin.com/in/askinkadir/"
+            },
+            {
+                "network": "GitHub",
+                "username": "akcware",
+                "url": "https://github.com/akcware"
+            }
+        ]
+    },
+    "work": [
+        {
+            "name": "Tesseract",
+            "position": "Founder & Engineer",
+            "location": "Karlsruhe, Germany",
+            "startDate": "2026-01",
+            "summary": "Founder and sole engineer of an AI education platform that turns a photo of a math problem into a step-by-step animated video explanation. Shipped to production on a paid subscription.",
+            "highlights": [
+                "Architected and built the product end-to-end across a native iOS app, a TypeScript/Bun backend, and a separate media-generation service",
+                "Built an automated pipeline that turns a math problem into a narrated, animated video — parsing the problem, generating programmatic animations, synthesizing voice narration, and compositing into a vertical video",
+                "Engineered an LLM orchestration layer producing structured mixed-media responses (text, tables, charts, diagrams, code) with multi-provider fallback, on PostgreSQL (Neon) and DigitalOcean"
+            ]
+        },
+        {
+            "name": "OmmaWorks",
+            "position": "Business Operations Specialist",
+            "location": "Remote",
+            "startDate": "2024-03",
+            "summary": "Drove AI integration and workflow automation across departments.",
+            "highlights": [
+                "Integrated LLM-based tools into daily operations to automate internal workflows and speed up cross-department tasks",
+                "Built and maintained BI dashboards (Retool, later Metabase) to enable data-driven decision-making"
+            ]
+        }
+    ],
+    "education": [
+        {
+            "institution": "Karlsruhe Institute of Technology (KIT)",
+            "area": "Computer Science",
+            "studyType": "Bachelor of Science",
+            "startDate": "2025",
+            "location": "Karlsruhe, Germany"
+        },
+        {
+            "institution": "Marmara University",
+            "area": "Computer Engineering (Transferred)",
+            "studyType": "Bachelor of Science",
+            "startDate": "2023",
+            "endDate": "2024",
+            "location": "Istanbul, Turkey"
+        }
+    ],
+    "skills": [
+        {
+            "name": "Applied AI & LLM Systems",
+            "keywords": [
+                "LangChain",
+                "OpenAI / Gemini / OpenRouter APIs",
+                "Prompt engineering & evaluation",
+                "Structured outputs & memory systems"
+            ]
+        },
+        {
+            "name": "Software Engineering",
+            "keywords": [
+                "TypeScript / Bun / Node.js",
+                "FastAPI",
+                "React Native, Flutter, Next.js",
+                "REST APIs & async workflows"
+            ]
+        },
+        {
+            "name": "Data & Tooling",
+            "keywords": [
+                "PostgreSQL, SQLite, MongoDB",
+                "DigitalOcean",
+                "Git & GitHub"
+            ]
+        }
+    ],
+    "projects": [
+        {
+            "name": "Proactive EV Co-Pilot",
+            "description": "AI-powered EV trip planner for multi-stop routing",
+            "highlights": [
+                "Winner, Mercedes-Benz Tech Innovation Hackathon — built a full prototype for multi-stop EV routing (Flutter, HERE APIs, preference-based ranking, LLM intent parser)"
+            ],
+            "keywords": [
+                "Flutter",
+                "LLM",
+                "HERE APIs"
+            ],
+            "startDate": "2025-12",
+            "endDate": "2025-12",
+            "url": "https://www.linkedin.com/feed/update/urn:li:activity:7400505797337747456/",
+            "roles": [
+                "Developer"
+            ],
+            "entity": "Mercedes-Benz Tech Innovation Hackathon",
+            "type": "application"
+        },
+        {
+            "name": "Twinify — AI Digital Twin for WhatsApp",
+            "description": "AI twin that mirrors personality and voice on WhatsApp",
+            "highlights": [
+                "Winner (LLMs & Vision models track), Nosu AI Hackathon — integrated OpenAI GPT and ElevenLabs voice cloning with a SQLite memory layer"
+            ],
+            "keywords": [
+                "LLM",
+                "Voice Cloning",
+                "SQLite"
+            ],
+            "startDate": "2025",
+            "endDate": "2025",
+            "url": "https://devpost.com/software/twinify-your-ai-powered-digital-twin-for-whatsapp",
+            "roles": [
+                "Developer"
+            ],
+            "entity": "Nosu AI Hackathon",
+            "type": "application"
+        }
+    ],
+    "languages": [
+        {
+            "language": "Turkish",
+            "fluency": "Native"
+        },
+        {
+            "language": "English",
+            "fluency": "Advanced"
+        },
+        {
+            "language": "German",
+            "fluency": "Advanced"
+        }
+    ],
+    "meta": {
+        "theme": "jsonresume-theme-even",
+        "version": "v1.0.0",
+        "lastModified": "2026-06-09"
+    }
+}

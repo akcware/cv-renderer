@@ -4,6 +4,34 @@ import type { CVData, CVMetadata, BuildResult } from "./types";
 
 const DATA_DIR = resolve(process.cwd(), "data");
 const OUTPUT_DIR = resolve(process.cwd(), "output");
+const FONTS_DIR = resolve(process.cwd(), "assets/fonts");
+
+/**
+ * Inline the theme's web fonts as base64 data URIs.
+ *
+ * The Professional theme references Latin Modern fonts via absolute paths
+ * (e.g. `/fonts/lmroman10-regular.otf`) that resolve nowhere during static
+ * HTML output or Puppeteer's `setContent` (no origin / base URL), so the text
+ * silently falls back to Courier New. Embedding the actual font bytes makes
+ * rendering self-contained and identical across HTML and PDF.
+ */
+async function embedFonts(html: string): Promise<string> {
+  const referenced = new Set(
+    [...html.matchAll(/\/fonts\/([a-zA-Z0-9._-]+\.otf)/g)].map((m) => m[1]),
+  );
+
+  for (const file of referenced) {
+    const fontFile = Bun.file(join(FONTS_DIR, file));
+    if (!(await fontFile.exists())) {
+      console.warn(`⚠ Font missing, will fall back: ${file}`);
+      continue;
+    }
+    const base64 = Buffer.from(await fontFile.arrayBuffer()).toString("base64");
+    html = html.replaceAll(`/fonts/${file}`, `data:font/otf;base64,${base64}`);
+  }
+
+  return html;
+}
 
 /**
  * Load a CV from the data directory
@@ -56,7 +84,7 @@ export async function renderToHTML(cv: CVData): Promise<string> {
   const { render } = await import("@jsonresume/jsonresume-theme-professional");
 
   const html = await render(cv);
-  return html;
+  return await embedFonts(html);
 }
 
 /**

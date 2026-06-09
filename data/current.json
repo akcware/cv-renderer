@@ -1,250 +1,264 @@
 {
-  "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
-  "basics": {
-    "name": "Aşkın Kadir Çekim",
-    "label": "Computer Science Student",
-    "email": "kadircekim.07@gmail.com",
-    "phone": "+49 162 760 9755",
-    "summary": "Computer Science student at KIT with hands-on experience building AI-powered products and hackathon-winning prototypes. Focused on applied LLM systems, workflow automation, and developer tooling. Experienced with LangChain, OpenRouter, Flutter, FastAPI, and data-driven backends. Actively building real-world products that integrate AI into production workflows.",
-    "location": {
-      "city": "Karlsruhe",
-      "countryCode": "DE",
-      "region": "Germany"
+    "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
+    "basics": {
+        "name": "A\u015fk\u0131n Kadir \u00c7ekim",
+        "label": "Computer Science Student",
+        "email": "kadircekim.07@gmail.com",
+        "phone": "+49 162 760 9755",
+        "summary": "Computer Science student at KIT with hands-on experience building AI-powered products and hackathon-winning prototypes. Focused on applied LLM systems, workflow automation, and developer tooling. Experienced with LangChain, OpenRouter, Flutter, FastAPI, and data-driven backends. Actively building real-world products that integrate AI into production workflows.",
+        "location": {
+            "city": "Karlsruhe",
+            "countryCode": "DE",
+            "region": "Germany"
+        },
+        "profiles": [
+            {
+                "network": "LinkedIn",
+                "username": "askinkadir",
+                "url": "https://linkedin.com/in/askinkadir/"
+            },
+            {
+                "network": "GitHub",
+                "username": "akcware",
+                "url": "https://github.com/akcware"
+            }
+        ]
     },
-    "profiles": [
-      {
-        "network": "LinkedIn",
-        "username": "askinkadir",
-        "url": "https://linkedin.com/in/askinkadir/"
-      },
-      {
-        "network": "GitHub",
-        "username": "akcware",
-        "url": "https://github.com/akcware"
-      }
-    ]
-  },
-  "work": [
-    {
-      "name": "OmmaWorks",
-      "position": "Business Operations Specialist",
-      "location": "Remote",
-      "startDate": "2024-03",
-      "summary": "Business Operations Specialist focused on AI integration and workflow automation",
-      "highlights": [
-        "Researched, evaluated, and integrated AI tools (ChatGPT, Gemini, and other LLM-based solutions) to improve efficiency across departments",
-        "Automated internal workflows by embedding AI-driven solutions into daily operations, increasing team productivity",
-        "Structured and optimized the company Knowledge Base using AI-assisted documentation and search capabilities",
-        "Developed and maintained BI dashboards (initially with Retool, later with Metabase) incorporating AI-enhanced analytics for data-driven decision-making"
-      ]
+    "work": [
+        {
+            "name": "Tesseract",
+            "position": "Founder & Engineer",
+            "location": "Karlsruhe, Germany",
+            "startDate": "2026-01",
+            "summary": "Founder and sole engineer of Tesseract, an AI-powered education platform that turns a photo of a math problem into a step-by-step animated video explanation. Designed and built the product end-to-end and shipped it to production on a paid subscription model.",
+            "highlights": [
+                "Architected and built the entire product end-to-end across a native iOS app, a TypeScript backend, and a separate media-generation service \u2014 shipping a paid product running in production",
+                "Built an automated pipeline that converts a math problem into a narrated, animated explainer video: parsing the problem, planning the solution, generating programmatic animations, synthesizing voice narration, and compositing everything into a vertical video",
+                "Engineered an LLM orchestration layer that produces structured, mixed-media responses (text, tables, charts, diagrams, and code) and integrates multiple model providers with automatic fallback",
+                "Developed a camera-first iOS app (React Native / Expo) with secure authentication, asynchronous job handling, push notifications, and in-app video playback",
+                "Designed the backend and infrastructure: TypeScript/Bun services, PostgreSQL (Neon), cloud hosting on DigitalOcean, authentication, and subscription billing"
+            ]
+        },
+        {
+            "name": "OmmaWorks",
+            "position": "Business Operations Specialist",
+            "location": "Remote",
+            "startDate": "2024-03",
+            "summary": "Business Operations Specialist focused on AI integration and workflow automation",
+            "highlights": [
+                "Researched, evaluated, and integrated AI tools (ChatGPT, Gemini, and other LLM-based solutions) to improve efficiency across departments",
+                "Automated internal workflows by embedding AI-driven solutions into daily operations, increasing team productivity",
+                "Structured and optimized the company Knowledge Base using AI-assisted documentation and search capabilities",
+                "Developed and maintained BI dashboards (initially with Retool, later with Metabase) incorporating AI-enhanced analytics for data-driven decision-making"
+            ]
+        }
+    ],
+    "education": [
+        {
+            "institution": "Karlsruhe Institute of Technology (KIT)",
+            "area": "Computer Science",
+            "studyType": "Bachelor of Science",
+            "startDate": "2025",
+            "location": "Karlsruhe, Germany"
+        },
+        {
+            "institution": "Marmara University",
+            "area": "Computer Engineering (Transferred)",
+            "studyType": "Bachelor of Science",
+            "startDate": "2023",
+            "endDate": "2024",
+            "location": "Istanbul, Turkey"
+        },
+        {
+            "institution": "Private Antalya Final Science High School",
+            "studyType": "High School",
+            "startDate": "2022",
+            "endDate": "2023",
+            "location": "Antalya, Turkey"
+        },
+        {
+            "institution": "Dr. \u0130lhami Tankut Anatolian High School",
+            "studyType": "High School",
+            "startDate": "2019",
+            "endDate": "2022",
+            "location": "Antalya, Turkey"
+        }
+    ],
+    "skills": [
+        {
+            "name": "Applied AI & LLM Systems",
+            "keywords": [
+                "LangChain",
+                "OpenRouter",
+                "OpenAI API",
+                "Gemini API",
+                "Prompt engineering & evaluation",
+                "Long-term memory systems (SQLite-based)"
+            ]
+        },
+        {
+            "name": "Software Engineering",
+            "keywords": [
+                "Backend: FastAPI, Node.js",
+                "Frontend: Flutter, Next.js",
+                "Runtime & tooling: Bun",
+                "REST APIs, async workflows"
+            ]
+        },
+        {
+            "name": "Databases",
+            "keywords": [
+                "PostgreSQL",
+                "SQLite",
+                "MongoDB"
+            ]
+        },
+        {
+            "name": "Developer Tools & Analytics",
+            "keywords": [
+                "Git & GitHub",
+                "Metabase",
+                "Notion (knowledge systems & documentation)"
+            ]
+        }
+    ],
+    "projects": [
+        {
+            "name": "Proactive EV Co-Pilot",
+            "description": "AI-powered EV itinerary planning assistant for multi-stop routing",
+            "highlights": [
+                "Implemented user preference learning, constraint-aware scoring, and real-time charging insights",
+                "Built a full architectural prototype with a Flutter frontend, HERE APIs, a preference-based ranking engine, and an LLM-driven intent parser",
+                "Awarded as a winner for innovation in intelligent EV navigation"
+            ],
+            "keywords": [
+                "AI",
+                "EV",
+                "Flutter",
+                "LLM",
+                "HERE APIs"
+            ],
+            "startDate": "2025-12",
+            "endDate": "2025-12",
+            "url": "https://www.linkedin.com/feed/update/urn:li:activity:7400505797337747456/",
+            "roles": [
+                "Developer"
+            ],
+            "entity": "Mercedes-Benz Tech Innovation Hackathon",
+            "type": "application"
+        },
+        {
+            "name": "Twinify -- Your AI-Powered Digital Twin for WhatsApp",
+            "description": "AI-powered digital twin that mirrors personality, voice, and communication style on WhatsApp",
+            "highlights": [
+                "Integrated OpenAI GPT for conversational intelligence, ElevenLabs for realistic voice cloning, and WhatsApp Web.js for messaging",
+                "Implemented a SQLite-backed memory layer to preserve long-term context and enable rich, ongoing conversations",
+                "Recognized as a winner in the 'Exploratory use of LLMs and Vision models' track at the Nosu AI Hackathon"
+            ],
+            "keywords": [
+                "AI",
+                "LLM",
+                "Voice Cloning",
+                "WhatsApp",
+                "SQLite"
+            ],
+            "startDate": "2025",
+            "endDate": "2025",
+            "url": "https://devpost.com/software/twinify-your-ai-powered-digital-twin-for-whatsapp",
+            "roles": [
+                "Developer"
+            ],
+            "entity": "Nosu AI Hackathon",
+            "type": "application"
+        },
+        {
+            "name": "UNITE -- Government Procurement Platform",
+            "description": "Crisis-time platform to streamline public procurement, acting as an 'Alibaba for government tenders'",
+            "highlights": [
+                "Developed using Node.js to enable efficient tender discovery and matching between governments and suppliers",
+                "Achieved 4th place in the #EuVsVirus Hackathon at the age of 14"
+            ],
+            "keywords": [
+                "Node.js",
+                "Government",
+                "Procurement"
+            ],
+            "startDate": "2020",
+            "endDate": "2020",
+            "url": "https://devpost.com/software/unite-government-procurement-platform",
+            "roles": [
+                "Developer"
+            ],
+            "entity": "#EuVsVirus Hackathon",
+            "type": "application"
+        },
+        {
+            "name": "Liberta -- Decentralized Social Media",
+            "description": "Blockchain-based social media platform focusing on privacy, data ownership, and censorship resistance",
+            "highlights": [
+                "Implemented the frontend using Vue.js and leveraged the NEO N3 blockchain with the NEO\u2022ONE developer framework for back-end operations",
+                "Developed and tested smart contracts locally using NEO\u2022ONE's local blockchain testing capabilities before deployment",
+                "Provided a decentralized alternative to traditional social media platforms"
+            ],
+            "keywords": [
+                "Vue.js",
+                "Blockchain",
+                "NEO N3",
+                "Privacy"
+            ],
+            "url": "https://devpost.com/software/liberta-the-social-media-that-managed-by-users",
+            "roles": [
+                "Developer"
+            ],
+            "type": "application"
+        },
+        {
+            "name": "DON8 -- Donation Made Great",
+            "description": "Cross-platform mobile app to encourage charitable giving through everyday purchases",
+            "highlights": [
+                "Built using Flutter to integrate donations seamlessly into daily life",
+                "Focused on use cases in the food and drink sector"
+            ],
+            "keywords": [
+                "Flutter",
+                "Mobile",
+                "Charity"
+            ],
+            "url": "https://devpost.com/software/don8-donation-made-great",
+            "roles": [
+                "Developer"
+            ],
+            "type": "application"
+        }
+    ],
+    "languages": [
+        {
+            "language": "Turkish",
+            "fluency": "Native"
+        },
+        {
+            "language": "English",
+            "fluency": "Advanced"
+        },
+        {
+            "language": "German",
+            "fluency": "Advanced"
+        }
+    ],
+    "interests": [
+        {
+            "name": "Technology",
+            "keywords": [
+                "AI",
+                "EV mobility",
+                "Developer tooling",
+                "Large language model applications"
+            ]
+        }
+    ],
+    "meta": {
+        "theme": "jsonresume-theme-even",
+        "version": "v1.0.0",
+        "lastModified": "2026-01-19"
     }
-  ],
-  "education": [
-    {
-      "institution": "Karlsruhe Institute of Technology (KIT)",
-      "area": "Computer Science",
-      "studyType": "Bachelor of Science",
-      "startDate": "2025",
-      "location": "Karlsruhe, Germany"
-    },
-    {
-      "institution": "Marmara University",
-      "area": "Computer Engineering (Transferred)",
-      "studyType": "Bachelor of Science",
-      "startDate": "2023",
-      "endDate": "2024",
-      "location": "Istanbul, Turkey"
-    },
-    {
-      "institution": "Private Antalya Final Science High School",
-      "studyType": "High School",
-      "startDate": "2022",
-      "endDate": "2023",
-      "location": "Antalya, Turkey"
-    },
-    {
-      "institution": "Dr. İlhami Tankut Anatolian High School",
-      "studyType": "High School",
-      "startDate": "2019",
-      "endDate": "2022",
-      "location": "Antalya, Turkey"
-    }
-  ],
-  "skills": [
-    {
-      "name": "Applied AI & LLM Systems",
-      "keywords": [
-        "LangChain",
-        "OpenRouter",
-        "OpenAI API",
-        "Gemini API",
-        "Prompt engineering & evaluation",
-        "Long-term memory systems (SQLite-based)"
-      ]
-    },
-    {
-      "name": "Software Engineering",
-      "keywords": [
-        "Backend: FastAPI, Node.js",
-        "Frontend: Flutter, Next.js",
-        "Runtime & tooling: Bun",
-        "REST APIs, async workflows"
-      ]
-    },
-    {
-      "name": "Databases",
-      "keywords": [
-        "PostgreSQL",
-        "SQLite",
-        "MongoDB"
-      ]
-    },
-    {
-      "name": "Developer Tools & Analytics",
-      "keywords": [
-        "Git & GitHub",
-        "Metabase",
-        "Notion (knowledge systems & documentation)"
-      ]
-    }
-  ],
-  "projects": [
-    {
-      "name": "Proactive EV Co-Pilot",
-      "description": "AI-powered EV itinerary planning assistant for multi-stop routing",
-      "highlights": [
-        "Implemented user preference learning, constraint-aware scoring, and real-time charging insights",
-        "Built a full architectural prototype with a Flutter frontend, HERE APIs, a preference-based ranking engine, and an LLM-driven intent parser",
-        "Awarded as a winner for innovation in intelligent EV navigation"
-      ],
-      "keywords": [
-        "AI",
-        "EV",
-        "Flutter",
-        "LLM",
-        "HERE APIs"
-      ],
-      "startDate": "2025",
-      "endDate": "2025",
-      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7400505797337747456/",
-      "roles": [
-        "Developer"
-      ],
-      "entity": "Mercedes-Benz Tech Innovation Hackathon",
-      "type": "application"
-    },
-    {
-      "name": "Twinify -- Your AI-Powered Digital Twin for WhatsApp",
-      "description": "AI-powered digital twin that mirrors personality, voice, and communication style on WhatsApp",
-      "highlights": [
-        "Integrated OpenAI GPT for conversational intelligence, ElevenLabs for realistic voice cloning, and WhatsApp Web.js for messaging",
-        "Implemented a SQLite-backed memory layer to preserve long-term context and enable rich, ongoing conversations",
-        "Recognized as a winner in the 'Exploratory use of LLMs and Vision models' track at the Nosu AI Hackathon"
-      ],
-      "keywords": [
-        "AI",
-        "LLM",
-        "Voice Cloning",
-        "WhatsApp",
-        "SQLite"
-      ],
-      "startDate": "2025",
-      "endDate": "2025",
-      "url": "https://devpost.com/software/twinify-your-ai-powered-digital-twin-for-whatsapp",
-      "roles": [
-        "Developer"
-      ],
-      "entity": "Nosu AI Hackathon",
-      "type": "application"
-    },
-    {
-      "name": "UNITE -- Government Procurement Platform",
-      "description": "Crisis-time platform to streamline public procurement, acting as an 'Alibaba for government tenders'",
-      "highlights": [
-        "Developed using Node.js to enable efficient tender discovery and matching between governments and suppliers",
-        "Achieved 4th place in the #EuVsVirus Hackathon at the age of 14"
-      ],
-      "keywords": [
-        "Node.js",
-        "Government",
-        "Procurement"
-      ],
-      "startDate": "2020",
-      "endDate": "2020",
-      "url": "https://devpost.com/software/unite-government-procurement-platform",
-      "roles": [
-        "Developer"
-      ],
-      "entity": "#EuVsVirus Hackathon",
-      "type": "application"
-    },
-    {
-      "name": "Liberta -- Decentralized Social Media",
-      "description": "Blockchain-based social media platform focusing on privacy, data ownership, and censorship resistance",
-      "highlights": [
-        "Implemented the frontend using Vue.js and leveraged the NEO N3 blockchain with the NEO•ONE developer framework for back-end operations",
-        "Developed and tested smart contracts locally using NEO•ONE's local blockchain testing capabilities before deployment",
-        "Provided a decentralized alternative to traditional social media platforms"
-      ],
-      "keywords": [
-        "Vue.js",
-        "Blockchain",
-        "NEO N3",
-        "Privacy"
-      ],
-      "url": "https://devpost.com/software/liberta-the-social-media-that-managed-by-users",
-      "roles": [
-        "Developer"
-      ],
-      "type": "application"
-    },
-    {
-      "name": "DON8 -- Donation Made Great",
-      "description": "Cross-platform mobile app to encourage charitable giving through everyday purchases",
-      "highlights": [
-        "Built using Flutter to integrate donations seamlessly into daily life",
-        "Focused on use cases in the food and drink sector"
-      ],
-      "keywords": [
-        "Flutter",
-        "Mobile",
-        "Charity"
-      ],
-      "url": "https://devpost.com/software/don8-donation-made-great",
-      "roles": [
-        "Developer"
-      ],
-      "type": "application"
-    }
-  ],
-  "languages": [
-    {
-      "language": "Turkish",
-      "fluency": "Native"
-    },
-    {
-      "language": "English",
-      "fluency": "Advanced"
-    },
-    {
-      "language": "German",
-      "fluency": "Advanced"
-    }
-  ],
-  "interests": [
-    {
-      "name": "Technology",
-      "keywords": [
-        "AI",
-        "EV mobility",
-        "Developer tooling",
-        "Large language model applications"
-      ]
-    }
-  ],
-  "meta": {
-    "theme": "jsonresume-theme-even",
-    "version": "v1.0.0",
-    "lastModified": "2026-01-19"
-  }
 }
